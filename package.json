@@ -8,7 +8,7 @@
   "private": true,
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^2.10.2",
+    "eslint": "^3.0.1",
     "espower-typescript": "^5.0.1",
     "mocha": "^2.5.3",
     "power-assert": "^1.4.1",
