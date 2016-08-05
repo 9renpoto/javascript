@@ -1,7 +1,7 @@
 {
   "name": "@9renpoto/ts",
   "scripts": {
-    "lint:ts": "tslint $(find src test -name '*.ts')",
+    "lint:ts": "tslint \"src/*ts\" \"test/*.ts\"",
     "lint": "npm-run-all -p -l lint:*",
     "postinstall": "typings i",
     "test:lint": "npm run lint",
