@@ -3,7 +3,7 @@
   "scripts": {
     "lint:ts": "tslint $(find src test -name '*.ts')",
     "lint": "npm-run-all -p -l lint:*",
-    "postinstall": "typings i",
+    "postinstall": "typings i && sh ./build.sh",
     "test:lint": "npm run lint",
     "test:mocha": "mocha",
     "test": "npm-run-all -p test:*"
