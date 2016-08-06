@@ -3,7 +3,7 @@
   "scripts": {
     "lint:ts": "tslint $(find src test -name '*.ts')",
     "lint": "npm-run-all -p -l lint:*",
-    "postinstall": "typings i",
+    "postinstall": "typings i && sh ./build.sh",
     "test:lint": "npm run lint",
     "test:mocha": "mocha",
     "test": "npm-run-all -p test:*"
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@9renpoto/tslint-config": "^1.0.0",
     "espower-typescript": "^5.0.1",
+    "typescript-simple": "git://github.com/uncovertruth/typescript-simple.git#fix/file-text",
     "mocha": "^3.0.0",
     "npm-run-all": "^2.3.0",
     "power-assert": "^1.4.1",
