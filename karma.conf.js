@@ -2,18 +2,25 @@ module.exports = function(config) {
   config.set({
     basePath: '',
     files: [
-      '**/*.test.ts'
+      '**/*.ts'
     ],
     preprocessors: {
-      '**/*.ts': ['webpack']
+      '**/*.test.ts': ['webpack']
     },
     plugins: [
-      require('karma-typescript-preprocessor'),
       require('karma-coverage'),
       require('karma-mocha'),
       require('karma-firefox-launcher'),
       require('karma-webpack')
     ],
+    webpack: {
+      module: { loaders: [
+        {
+          test: /\.tsx?$/,
+          loader: 'ts-loader'
+        }
+      ]}
+    },
     webpackMiddleware: {
       noInfo: true,
       quiet: true,
