@@ -13,6 +13,6 @@ MIT
 [david-dm-image]: https://david-dm.org/9renpoto/ts.svg
 [david-dm-url]: https://david-dm.org/9renpoto/ts
 [dev-david-dm-image]: https://david-dm.org/9renpoto/ts/dev-status.svg
-[dev-david-dm-url]: https://david-dm.org/9renpoto/ts#info=devDependencies
+[dev-david-dm-url]: https://david-dm.org/9renpoto/ts?type=dev
 [travis-image]: https://travis-ci.org/9renpoto/ts.svg?branch=master
 [travis-url]: https://travis-ci.org/9renpoto/ts
