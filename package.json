@@ -10,16 +10,12 @@
   },
   "scripts": {
     "clean": "rimraf dist && rimraf coverage",
-    "cover:html": "cd coverage && remap-istanbul -i coverage.json -o html-report -t html",
     "cover": "npm-run-all -p cover:*",
-    "cover:json": "cd coverage && cat coverage.json | remap-istanbul -o coverage-remapped.json",
-    "codecov": "npm run cover && codecov -f coverage/coverage-remapped.json",
     "lint:ts": "tslint \"src/*.ts\" \"test/*.ts\"",
     "lint": "npm-run-all -p -l lint:*",
-    "pretest:mocha": "npm run clean && tsc",
     "posttest": "npm run cover",
     "test:lint": "npm run lint",
-    "test:mocha": "istanbul cover _mocha -- dist/test/*.test.js",
+    "test:karma": "karma start --single-run",
     "test": "npm-run-all -p test:*"
   },
   "directories": {
@@ -33,14 +29,19 @@
     "@types/mocha": "^2.2.29",
     "@types/power-assert": "0.0.27",
     "codecov": "^1.0.1",
-    "istanbul": "^0.4.4",
+    "karma": "^1.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-mocha": "^1.1.1",
+    "karma-webpack": "^1.8.0",
     "mocha": "^3.0.0",
     "npm-run-all": "^3.0.0",
     "power-assert": "^1.4.1",
-    "remap-istanbul": "^0.6.4",
     "rimraf": "^2.5.4",
+    "ts-loader": "^0.8.2",
     "tslint": "^3.14.0",
-    "typescript": "^2.0.0"
+    "typescript": "^2.0.0",
+    "webpack": "^1.13.2"
   },
   "keywords": [
     "codecov",
