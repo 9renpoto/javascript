@@ -4,6 +4,8 @@ node_js:
 - stable
 - '6'
 - '5'
+addons:
+  firefox: "latest"
 cache:
   directories:
   - node_modules
