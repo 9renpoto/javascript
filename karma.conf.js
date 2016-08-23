@@ -1,40 +1,21 @@
+const path = require('path')
+
 module.exports = function(config) {
   config.set({
     basePath: '',
+    frameworks: ['mocha'],
     files: [
-      '**/*.ts'
+      'src/*.ts',
+      'test/*test.ts'
+    ],
+    exclude: [
     ],
     preprocessors: {
-      '**/*.test.ts': ['webpack']
+      'test/*test.ts': ['webpack'],
     },
-    plugins: [
-      require('karma-coverage'),
-      require('karma-mocha'),
-      require('karma-firefox-launcher'),
-      require('karma-webpack')
-    ],
-    webpack: {
-      module: { loaders: [
-        {
-          test: /\.tsx?$/,
-          loader: 'ts-loader'
-        }
-      ]}
-    },
-    webpackMiddleware: {
-      noInfo: true,
-      quiet: true,
-      stats: {
-        colors: true
-      }
-    },
-    coverageReporter: {
-      reporters: [
-        {type: 'html'},
-        {type: 'cobertura'}
-      ]
-    },
-    reporters: ['progress', 'coverage'],
-    browsers: ['Firefox']
+    webpack: require('./webpack.config.js'),
+    reporters: ['progress'],
+    browsers: ['Firefox'],
+    concurrency: Infinity
   })
 }
