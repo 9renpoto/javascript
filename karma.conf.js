@@ -14,6 +14,13 @@ module.exports = function(config) {
       'test/*test.ts': ['webpack'],
     },
     webpack: require('./webpack.config.js'),
+    webpackMiddleware: {
+      noInfo: true,
+      quiet: true,
+      stats: {
+        colors: true
+      }
+    },
     reporters: ['progress'],
     browsers: ['Firefox'],
     concurrency: Infinity
