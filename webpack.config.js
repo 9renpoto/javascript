@@ -1,21 +1,16 @@
+const path = require('path')
 module.exports = {
   entry: {
-    app: __dirname + '/src/index.ts',
+    app: path.join(__dirname, '/src/index.ts'),
   },
   output: {
-    path: __dirname + '/dist',
+    path: path.join(__dirname, '/dist'),
     filename: "[name].bundle.js",
   },
   resolve: {
-    extensions: ['', '.ts', '.js'],
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
   },
-  module: {
-    loaders: [
-      { test: /\.ts$/, loader: 'ts-loader' },
-      { test: /\.json$/, loader: 'json-loader' },
-    ],
-    postLoaders: [
-      { test: /test\.ts$/, loader: 'webpack-espower-loader' },
-    ],
-  },
+  module: { loaders: [
+    { test: /\.ts$/, loader: 'awesome-typescript-loader' }
+  ]},
 };
