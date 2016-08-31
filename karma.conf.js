@@ -1,3 +1,5 @@
+const webpackConfig = require('./webpack.config')
+
 module.exports = function (config) {
   config.set({
     basePath: '',
@@ -9,12 +11,15 @@ module.exports = function (config) {
     exclude: [
     ],
     preprocessors: {
-      'test/*test.ts': ['webpack']
+      'test/*test.ts': ['webpack', 'sourcemap']
     },
-    webpack: require('./webpack.config.js'),
+    webpack: {
+      module: webpackConfig.module,
+      resolve: webpackConfig.resolve
+    },
     webpackMiddleware: {
-      noInfo: true,
-      quiet: true,
+      // noInfo: true,
+      // quiet: true,
       stats: {
         colors: true
       }
