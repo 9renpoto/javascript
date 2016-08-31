@@ -1,4 +1,4 @@
-import Calculator from '../src/index'
+import Calculator from '../src/calculator'
 import * as assert from 'power-assert'
 
 describe('Calculator', function () {

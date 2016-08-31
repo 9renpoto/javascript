@@ -1,5 +1,7 @@
-export default class Calculator {
+class Calculator {
   public add(x: number, y: number): number {
     return x + y
   }
 }
+
+export default Calculator
