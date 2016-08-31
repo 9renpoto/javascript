@@ -1,6 +1,4 @@
-const path = require('path')
-
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['mocha'],
@@ -11,7 +9,7 @@ module.exports = function(config) {
     exclude: [
     ],
     preprocessors: {
-      'test/*test.ts': ['webpack'],
+      'test/*test.ts': ['webpack']
     },
     webpack: require('./webpack.config.js'),
     webpackMiddleware: {

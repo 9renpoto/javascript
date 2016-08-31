@@ -1,17 +1,15 @@
 import Calculator from '../src/index'
 import * as assert from 'power-assert'
 
-describe('Calculator', () => {
+describe('Calculator', function () {
   let subject: Calculator
 
-  beforeEach(function() {
+  beforeEach(function () {
     subject = new Calculator()
   })
 
-  describe('#add', () => {
-    it('should add two numbers together', () => {
-      let result: number = subject.add(2, 3)
-      assert(5 === result)
-    })
+  it('should add two numbers together', function () {
+    const result: number = subject.add(2, 3)
+    assert(5 === result)
   })
 })
