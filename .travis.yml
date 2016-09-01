@@ -5,7 +5,7 @@ node_js:
 - '6'
 - '5'
 addons:
-  firefox: "48.0"
+  firefox: latest
 cache:
   directories:
   - node_modules
