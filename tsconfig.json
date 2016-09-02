@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
-    "declaration": true,
     "module": "commonjs",
-    "target": "es6",
+    "target": "es5",
     "noImplicitAny": true
   },
   "compileOnSave": false,
-  "buildOnSave": false
+  "buildOnSave": false,
+  "filesGlob": [
+    "./typings/index.d.ts"
+  ],
+  "files": [
+    "./typings/index.d.ts"
+  ]
 }
