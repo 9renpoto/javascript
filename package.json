@@ -35,7 +35,7 @@
   },
   "scripts": {
     "clean": "rimraf dist coverage .nyc_output",
-    "codecov": "npm run cover && codecov -f coverage/lcov.info",
+    "codecov": "codecov -f coverage/lcov.info",
     "lint": "npm-run-all -p -l lint:*",
     "lint:ts": "npm-run-all -p lint:ts:*",
     "lint:ts:src": "tslint src/*.ts",
