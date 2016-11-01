@@ -5,21 +5,18 @@
   "author": "9renpoto",
   "dependencies": {},
   "devDependencies": {
-    "@9renpoto/eslint-config": "^1.4.0",
     "@9renpoto/tslint-config": "^1.1.0",
-    "@types/mocha": "^2.2.29",
+    "@types/mocha": "^2.2.32",
     "@types/power-assert": "^1.4.29",
     "codecov": "^1.0.1",
-    "eslint": "^3.9.0",
-    "istanbul": "^0.4.4",
-    "mocha": "^3.0.0",
+    "intelli-espower-loader": "^1.0.1",
+    "mocha": "^3.1.2",
     "npm-run-all": "^3.1.1",
+    "nyc": "^8.3.2",
     "power-assert": "^1.4.1",
-    "remap-istanbul": "^0.7.0",
     "rimraf": "^2.5.4",
     "tslint": "^3.15.1",
-    "typescript": "^2.0.0",
-    "typescript-eslint-parser": "^0.4.0"
+    "typescript": "^2.0.6"
   },
   "directories": {
     "test": "test"
@@ -37,18 +34,15 @@
     "url": "git+ssh://git@github.com/9renpoto/javascript.git"
   },
   "scripts": {
-    "clean": "rimraf dist coverage",
-    "codecov": "npm run cover && codecov -f coverage/coverage-remapped.json",
-    "cover": "npm-run-all -p cover:*",
-    "cover:html": "cd coverage && remap-istanbul -i coverage.json -o html-report -t html",
-    "cover:json": "cd coverage && cat coverage.json | remap-istanbul -o coverage-remapped.json",
+    "clean": "rimraf dist coverage .nyc_output",
+    "codecov": "npm run cover && codecov -f coverage/lcov.info",
     "lint": "npm-run-all -p -l lint:*",
-    "lint:es": "eslint .",
-    "lint:ts": "tslint \"src/*.ts\" \"test/*.ts\"",
-    "posttest": "npm run cover",
+    "lint:ts": "npm-run-all -p lint:ts:*",
+    "lint:ts:src": "tslint src/*.ts",
+    "lint:ts:test": "tslint test/*.ts",
     "pretest:mocha": "npm run clean && tsc",
     "test": "npm-run-all -p test:*",
     "test:lint": "npm run lint",
-    "test:mocha": "istanbul cover _mocha -- dist/test/*.test.js"
+    "test:mocha": "nyc --reporter=lcov --reporter=html mocha -- dist/test/*.test.js"
   }
 }
