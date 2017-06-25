@@ -46,22 +46,6 @@
     ]
   },
   "main": "n/a",
-  "nyc": {
-    "extension": [
-      ".ts",
-      ".tsx"
-    ],
-    "exclude": [
-      "**/*.d.ts"
-    ],
-    "require": [
-      "ts-node/register"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ]
-  },
   "private": true,
   "repository": {
     "type": "git",
