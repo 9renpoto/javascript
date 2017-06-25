@@ -7,11 +7,9 @@ node_js:
 env:
   matrix:
   - CMD=test
-  - CMD=eslint
+  - CMD=lint
 matrix:
   fast_finish: true
-  allow_failures:
-  - env: CMD=eslint
 script:
 - npm run $CMD
 after_success:

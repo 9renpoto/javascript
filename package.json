@@ -40,7 +40,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "prettier --write",
-      "eslint --fix",
+      "tslint --fix",
       "tslint",
       "git add"
     ]
@@ -52,8 +52,7 @@
       ".tsx"
     ],
     "exclude": [
-      "**/*.d.ts",
-      "**/*.test.ts"
+      "**/*.d.ts"
     ],
     "require": [
       "ts-node/register"
@@ -70,15 +69,14 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "coverage": "codecov -f ./coverage/lcov.info",
     "clean": "rimraf dist coverage",
-    "eslint": "eslint . --ext=ts,tsx",
+    "coverage": "codecov -f ./coverage/lcov.info",
     "lint": "npm-run-all -p lint:*",
+    "lint:eslint": "eslint . --ext=ts,tsx",
     "lint:ts": "tslint \"src/*.ts\" \"test/*.ts\"",
     "precommit": "lint-staged",
     "test": "npm-run-all -p test:*",
     "test:build": "npm run build",
-    "test:lint": "npm run lint",
     "test:mocha": "nyc mocha -- test/*.test.ts"
   }
 }
