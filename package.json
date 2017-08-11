@@ -20,7 +20,7 @@
     "power-assert": "^1.4.4",
     "prettier": "^1.4.4",
     "rimraf": "^2.6.1",
-    "rollup": "^0.45.1",
+    "rollup": "^0.46.0",
     "rollup-plugin-typescript": "^0.8.1",
     "source-map-support": "^0.4.15",
     "ts-node": "^3.1.0",
