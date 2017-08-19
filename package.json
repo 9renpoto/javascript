@@ -42,6 +42,7 @@
   "scripts": {
     "build": "lerna run build",
     "lint": "lerna run lint",
+    "postinstall": "lerna bootstrap",
     "precommit": "lint-staged",
     "test": "lerna run test"
   }
