@@ -8,12 +8,13 @@ env:
   matrix:
   - CMD=test
   - CMD=lint
+  - CMD=build
 matrix:
   fast_finish: true
 script:
-- npm run $CMD
+- yarn $CMD
 after_success:
-- npm run coverage
+- yarn coverage
 notifications:
   email: false
   slack:
