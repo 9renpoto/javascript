@@ -12,7 +12,6 @@
     "husky": "^0.14.3",
     "lerna": "^2.1.0",
     "lint-staged": "^4.0.4",
-    "npm-check-updates": "^2.12.1",
     "npm-run-all": "^4.0.2",
     "prettier": "^1.5.3",
     "rimraf": "^2.6.1",
@@ -59,7 +58,6 @@
   },
   "scripts": {
     "build": "lerna run build",
-    "deps": "lerna run deps",
     "lint": "lerna run lint",
     "postinstall": "lerna bootstrap",
     "precommit": "lint-staged",
