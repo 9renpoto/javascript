@@ -6,21 +6,16 @@
   "devDependencies": {
     "@9renpoto/eslint-config": "^2.3.0",
     "@9renpoto/tslint-config": "^3.2.0",
-    "@types/mocha": "^2.2.41",
-    "@types/power-assert": "^1.4.29",
     "codecov": "^2.3.0",
     "eslint": "^4.5.0",
+    "fixpack": "^2.3.1",
     "husky": "^0.14.3",
-    "intelli-espower-loader": "^1.0.1",
     "lerna": "^2.1.0",
     "lint-staged": "^4.0.4",
-    "mocha": "^3.5.0",
+    "npm-check-updates": "^2.12.1",
     "npm-run-all": "^4.0.2",
-    "nyc": "^11.1.0",
-    "power-assert": "^1.4.4",
     "prettier": "^1.5.3",
     "rimraf": "^2.6.1",
-    "source-map-support": "^0.4.16",
     "ts-node": "^3.3.0",
     "tslint": "^5.7.0",
     "typescript": "^2.4.2",
@@ -35,8 +30,21 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "prettier --parser typescript --write",
+      "tslint --fix",
       "tslint",
       "git add"
+    ]
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
     ]
   },
   "main": "n/a",
@@ -46,6 +54,7 @@
     "url": "git+ssh://git@github.com/9renpoto/javascript.git"
   },
   "scripts": {
+    "deps": "lerna run deps",
     "build": "lerna run build",
     "lint": "lerna run lint",
     "postinstall": "lerna bootstrap",

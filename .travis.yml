@@ -6,9 +6,10 @@ node_js:
 - 6
 env:
   matrix:
-  - CMD=test
-  - CMD=lint
   - CMD=build
+  - CMD=deps
+  - CMD=lint
+  - CMD=test
 matrix:
   fast_finish: true
 script:
