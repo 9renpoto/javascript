@@ -24,9 +24,9 @@
   "private": true,
   "scripts": {
     "build": "",
-    "deps": "ncu -e 2",
     "clean": "rimraf dist coverage",
-    "coverage": "codecov -f ./coverage/lcov.info",
+    "coverage": "codecov -f ./coverage/lcov.info -F jest",
+    "deps": "ncu -e 2",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint . --ext=ts,tsx",
     "lint:ts": "tslint \"src/*.ts\" \"test/*.ts\"",

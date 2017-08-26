@@ -21,20 +21,6 @@
     "typescript": "^2.4.2",
     "typescript-eslint-parser": "^7.0.0"
   },
-  "keywords": [
-    "TypeScript",
-    "codecov",
-    "example"
-  ],
-  "license": "MIT",
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --parser typescript --write",
-      "tslint --fix",
-      "tslint",
-      "git add"
-    ]
-  },
   "jest": {
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
@@ -47,6 +33,24 @@
       "json"
     ]
   },
+  "keywords": [
+    "TypeScript",
+    "codecov",
+    "example"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --parser typescript --write",
+      "tslint --fix",
+      "tslint",
+      "git add"
+    ],
+    "package.json": [
+      "fixpack",
+      "git add"
+    ]
+  },
   "main": "n/a",
   "private": true,
   "repository": {
@@ -54,8 +58,8 @@
     "url": "git+ssh://git@github.com/9renpoto/javascript.git"
   },
   "scripts": {
-    "deps": "lerna run deps",
     "build": "lerna run build",
+    "deps": "lerna run deps",
     "lint": "lerna run lint",
     "postinstall": "lerna bootstrap",
     "precommit": "lint-staged",

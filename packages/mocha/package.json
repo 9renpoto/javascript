@@ -2,22 +2,6 @@
   "name": "@9renpoto/ts-mocha",
   "version": "0.0.1",
   "author": "@9renpoto",
-  "directories": {
-    "test": "test"
-  },
-  "license": "MIT",
-  "main": "n/a",
-  "private": true,
-  "scripts": {
-    "deps": "ncu -e 2",
-    "build": "",
-    "clean": "rimraf dist coverage",
-    "coverage": "codecov -f ./coverage/lcov.info",
-    "lint": "run-p lint:*",
-    "lint:eslint": "eslint . --ext=ts,tsx",
-    "lint:ts": "tslint \"src/*.ts\" \"test/*.ts\"",
-    "test": "nyc mocha -- test/*.test.ts"
-  },
   "devDependencies": {
     "@types/mocha": "^2.2.42",
     "@types/power-assert": "^1.4.29",
@@ -26,5 +10,21 @@
     "nyc": "^11.1.0",
     "power-assert": "^1.4.4",
     "source-map-support": "^0.4.16"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "license": "MIT",
+  "main": "n/a",
+  "private": true,
+  "scripts": {
+    "build": "",
+    "clean": "rimraf dist coverage",
+    "coverage": "codecov -f ./coverage/lcov.info -F mocha",
+    "deps": "ncu -e 2",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint . --ext=ts,tsx",
+    "lint:ts": "tslint \"src/*.ts\" \"test/*.ts\"",
+    "test": "nyc mocha -- test/*.test.ts"
   }
 }
