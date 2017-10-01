@@ -1,0 +1,23 @@
+{
+  "name": "@9renpoto/protractor",
+  "version": "0.0.1",
+  "author": "9renpoto",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/protractor": "^4.0.0",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "protractor": "^5.1.2",
+    "typescript": "^2.5.3"
+  },
+  "keywords": [
+    "protractor"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "postintall": "webdriver-manager update",
+    "pretest": "tsc conf.ts --outDir .tmp",
+    "test": "protractor .tmp/conf.js"
+  }
+}
