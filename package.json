@@ -30,7 +30,6 @@
     "*.{ts,tsx}": [
       "prettier --parser typescript --write",
       "tslint --fix",
-      "tslint",
       "git add"
     ],
     "package.json": [
