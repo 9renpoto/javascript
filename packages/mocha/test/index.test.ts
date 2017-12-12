@@ -1,6 +1,7 @@
 import 'mocha'
-import Calculator from '../src'
 import * as assert from 'power-assert'
+
+import Calculator from '../src'
 
 describe('Calculator', () => {
   let subject: Calculator

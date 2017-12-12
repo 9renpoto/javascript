@@ -30,7 +30,7 @@
     "clean": "rimraf dist coverage",
     "coverage": "codecov -f ./coverage/lcov.info -F jest -t $CODECOV_TOKEN",
     "lint": "run-p lint:*",
-    "lint:ts": "tslint \"src/*.ts\" \"test/*.ts\"",
+    "lint:ts": "tslint {src,test}/**/*.ts",
     "test": "jest"
   }
 }
