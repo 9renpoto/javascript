@@ -2,10 +2,10 @@
   "name": "@9renpoto/jest",
   "version": "0.0.1",
   "devDependencies": {
-    "@types/jest": "^20.0.8",
-    "eslint-plugin-jest": "^20.0.3",
-    "jest": "^20.0.4",
-    "ts-jest": "^20.0.10"
+    "@types/jest": "^22.0.1",
+    "eslint-plugin-jest": "^21.6.1",
+    "jest": "^22.0.4",
+    "ts-jest": "^22.0.1"
   },
   "jest": {
     "transform": {
@@ -24,12 +24,11 @@
   "main": "n/a",
   "private": true,
   "scripts": {
-    "allow-failed:eslint": "eslint . --ext=ts,tsx",
-    "allow-failsures": "run-p allow-failed:*",
     "build": "",
     "clean": "rimraf dist coverage",
-    "coverage": "codecov -f ./coverage/lcov.info -F jest -t $CODECOV_TOKEN",
+    "coverage": "codecov -f ./coverage/lcov.info -F jest",
     "lint": "run-p lint:*",
+    "lint:es": "eslint . --ext=ts,tsx",
     "lint:ts": "tslint {src,test}/**/*.ts",
     "test": "jest"
   }
