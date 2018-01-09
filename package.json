@@ -13,7 +13,7 @@
     "lerna": "^2.6.0",
     "lint-staged": "^6.0.0",
     "npm-run-all": "^4.1.2",
-    "prettier": "^1.9.2",
+    "prettier-eslint-cli": "^4.7.0",
     "rimraf": "^2.6.2",
     "ts-node": "^4.1.0",
     "tslint": "^5.8.0",
@@ -28,8 +28,12 @@
   "license": "MIT",
   "lint-staged": {
     "*.{ts,tsx}": [
-      "prettier --parser typescript --write",
+      "prettier-eslint --parser typescript --write",
       "tslint --fix",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --parser markdown --write",
       "git add"
     ],
     "package.json": [
@@ -44,11 +48,9 @@
     "url": "git+ssh://git@github.com/9renpoto/javascript.git"
   },
   "scripts": {
-    "allow-failsures": "run-p allow-failed:*",
     "build": "lerna run build",
     "coverage": "lerna run coverage",
     "lint": "lerna run lint",
-    "postinstall": "lerna bootstrap",
     "precommit": "lint-staged",
     "test": "lerna run test"
   }

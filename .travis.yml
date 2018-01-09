@@ -1,23 +1,17 @@
 language: node_js
 sudo: false
-node_js:
-- stable
-- 7
-- 6
+node_js: stable
 env:
   matrix:
   - CMD=build
-  - CMD=allow-failures
   - CMD=lint
   - CMD=test
-matrix:
-  fast_finish: true
-  allow_failures:
-  - env: CMD=allow-failures
+before_script:
+- lerna bootstrap
 script:
 - yarn $CMD
 after_success:
-- yarn coverage
+- '[ "${CMD}" == "test" ] && yarn coverage'
 notifications:
   email: false
   slack:
