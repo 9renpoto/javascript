@@ -2,7 +2,10 @@
 
 study frontend
 
-[![codecov][codedov-image]][codecov-url] [![Travis Build Status][travis-image]][travis-url] [![Dependency Status][david-dm-image]][david-dm-url] [![devDependency Status][dev-david-dm-image]][dev-david-dm-url] [![Greenkeeper badge](https://badges.greenkeeper.io/9renpoto/ts.svg)](https://greenkeeper.io/)
+[![codecov][codedov-image]][codecov-url]
+[![Travis Build Status][travis-image]][travis-url]
+[![Dependency Status][david-dm-image]][david-dm-url]
+[![devDependency Status][dev-david-dm-image]][dev-david-dm-url]
 
 ## LICENSE
 
