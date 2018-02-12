@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "9renpoto",
   "devDependencies": {
-    "@9renpoto/eslint-config": "^2.4.0",
+    "@9renpoto/eslint-config": "^4.0.0",
     "@9renpoto/tslint-config": "^4.0.0",
     "codecov": "^3.0.0",
     "eslint": "^4.17.0",
