@@ -28,7 +28,7 @@
     "allow-failsures": "run-p allow-failed:*",
     "build": "",
     "clean": "rimraf dist coverage",
-    "coverage": "codecov -f ./coverage/lcov.info -F jest -t $CODECOV_TOKEN",
+    "coverage": "codecov -f ./coverage/lcov.info -F jest",
     "lint": "run-p lint:*",
     "lint:ts": "tslint {src,test}/**/*.ts",
     "test": "jest"

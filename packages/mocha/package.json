@@ -22,7 +22,7 @@
     "allow-failsures": "run-p allow-failed:*",
     "build": "",
     "clean": "rimraf dist coverage",
-    "coverage": "codecov -f ./coverage/lcov.info -F mocha -t $CODECOV_TOKEN",
+    "coverage": "codecov -f ./coverage/lcov.info -F mocha",
     "lint": "run-p lint:*",
     "lint:ts": "tslint {src,test}/**/*.ts",
     "test": "nyc mocha -- test/*.test.ts"
