@@ -9,7 +9,7 @@
     "mocha": "5.0.4",
     "nyc": "11.6.0",
     "power-assert": "1.4.4",
-    "source-map-support": "0.5.3"
+    "source-map-support": "0.5.4"
   },
   "directories": {
     "test": "test"
