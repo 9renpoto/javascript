@@ -47,6 +47,9 @@
     "type": "git",
     "url": "git+ssh://git@github.com/9renpoto/javascript.git"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "allow-failsures": "run-p allow-failed:*",
     "build": "lerna run build",
