@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "devDependencies": {
     "@types/jest": "23.3.0",
-    "eslint-plugin-jest": "21.17.0",
+    "eslint-plugin-jest": "21.18.0",
     "jest": "23.4.1",
     "ts-jest": "23.0.1"
   },
