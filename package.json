@@ -48,12 +48,13 @@
     "url": "git+ssh://git@github.com/9renpoto/javascript.git"
   },
   "scripts": {
-    "allow-failsures": "run-p allow-failed:*",
     "build": "lerna run build",
     "coverage": "lerna run coverage",
     "lint": "lerna run lint",
-    "postinstall": "lerna bootstrap",
     "precommit": "lint-staged",
     "test": "lerna run test"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

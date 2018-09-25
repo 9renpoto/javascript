@@ -9,7 +9,7 @@
   },
   "jest": {
     "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      ".(ts|tsx)": "../../node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "collectCoverage": true,
@@ -24,11 +24,10 @@
   "main": "n/a",
   "private": true,
   "scripts": {
-    "allow-failed:eslint": "eslint . --ext=ts,tsx",
-    "allow-failsures": "run-p allow-failed:*",
+    "lint:eslint": "eslint src __tests__ --ext=ts,tsx -c .eslintrc.json",
     "build": "",
     "clean": "rimraf dist coverage",
-    "coverage": "codecov -f ./coverage/lcov.info -F jest -t $CODECOV_TOKEN",
+    "coverage": "codecov -f ./coverage/lcov.info -F jest",
     "lint": "run-p lint:*",
     "lint:ts": "tslint {src,test}/**/*.ts",
     "test": "jest"
