@@ -4,13 +4,8 @@ node_js: stable
 env:
   matrix:
   - CMD=build
-  - CMD=allow-failures
   - CMD=lint
   - CMD=test
-matrix:
-  fast_finish: true
-  allow_failures:
-  - env: CMD=allow-failures
 script:
 - yarn $CMD
 after_success:
