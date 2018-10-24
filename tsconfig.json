@@ -3,7 +3,7 @@
     "target": "es5",
     "module": "commonjs",
     "lib": [
-      "ES2015"
+      "es2015"
     ],
     "allowJs": true,
     "checkJs": true,
@@ -27,10 +27,6 @@
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "baseUrl": "./",
-    "paths": {},
-    "rootDirs": [],
-    "typeRoots": [],
-    "types": [],
     "allowSyntheticDefaultImports": true,
     "inlineSourceMap": true,
     "inlineSources": true,

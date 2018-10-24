@@ -6,6 +6,7 @@
   "devDependencies": {
     "@9renpoto/eslint-config": "4.6.0",
     "@9renpoto/tslint-config": "4.6.0",
+    "@types/jest": "23.3.7",
     "codecov": "3.1.0",
     "eslint": "5.7.0",
     "fixpack": "2.3.1",
@@ -32,11 +33,12 @@
       "tslint --fix",
       "git add"
     ],
-    "*.md": [
+    "*.{md,js,jsx}": [
       "prettier --write",
       "git add"
     ],
     "package.json": [
+      "prettier --write",
       "fixpack",
       "git add"
     ]
@@ -51,10 +53,8 @@
     "build": "lerna run build",
     "coverage": "lerna run coverage",
     "lint": "lerna run lint",
+    "postinstall": "lerna bootstrap",
     "precommit": "lint-staged",
     "test": "lerna run test"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+  }
 }
