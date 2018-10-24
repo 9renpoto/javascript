@@ -2,23 +2,8 @@
   "name": "@9renpoto/jest",
   "version": "0.0.1",
   "devDependencies": {
-    "@types/jest": "23.3.7",
-    "eslint-plugin-jest": "21.26.0",
     "jest": "23.6.0",
-    "ts-jest": "23.1.4"
-  },
-  "jest": {
-    "transform": {
-      ".(ts|tsx)": "../../node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "collectCoverage": true,
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ]
+    "ts-jest": "23.10.2"
   },
   "license": "MIT",
   "main": "n/a",
@@ -30,6 +15,6 @@
     "coverage": "codecov -f ./coverage/lcov.info -F jest",
     "lint": "run-p lint:*",
     "lint:ts": "tslint {src,test}/**/*.ts",
-    "test": "jest"
+    "test": "jest --config=jest.config.js"
   }
 }
