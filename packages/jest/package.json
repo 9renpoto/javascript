@@ -2,7 +2,6 @@
   "name": "@9renpoto/jest",
   "version": "0.0.1",
   "devDependencies": {
-    "eslint-plugin-jest": "21.26.0",
     "jest": "23.6.0",
     "ts-jest": "23.10.2"
   },
