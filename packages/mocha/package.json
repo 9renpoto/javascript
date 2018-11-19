@@ -4,12 +4,12 @@
   "author": "@9renpoto",
   "devDependencies": {
     "@types/mocha": "5.2.5",
+    "@types/node": "^10.12.9",
     "@types/power-assert": "1.5.0",
-    "intelli-espower-loader": "1.0.1",
+    "espower-typescript": "^9.0.1",
     "mocha": "5.2.0",
     "nyc": "13.1.0",
-    "power-assert": "1.6.1",
-    "source-map-support": "0.5.9"
+    "power-assert": "1.6.1"
   },
   "directories": {
     "test": "test"
@@ -24,6 +24,6 @@
     "coverage": "codecov -f ./coverage/lcov.info -F mocha",
     "lint": "run-p lint:*",
     "lint:ts": "tslint {src,test}/**/*.ts",
-    "test": "nyc mocha -- test/*.test.ts"
+    "test": "TS_NODE_TRANSPILE_ONLY=1 nyc mocha -- test/*.test.ts"
   }
 }
