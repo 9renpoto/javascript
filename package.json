@@ -42,14 +42,14 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/9renpoto/javascript.git"
+    "url": "git+ssh://git@github.com/9renpoto/ts.git"
   },
   "scripts": {
-    "build": "lerna run build",
+    "build": "lerna run build --parallel",
     "coverage": "lerna run coverage",
-    "lint": "lerna run lint",
+    "lint": "lerna run lint --parallel",
     "postinstall": "lerna bootstrap",
-    "test": "lerna run test"
+    "test": "lerna run test --parallel"
   },
   "husky": {
     "hooks": {
