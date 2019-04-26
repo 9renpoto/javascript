@@ -2,7 +2,7 @@
   "name": "@9renpoto/jest",
   "version": "0.0.1",
   "devDependencies": {
-    "@types/node": "11.13.7",
+    "@types/node": "11.13.8",
     "jest": "24.7.1",
     "ts-jest": "24.0.2"
   },
