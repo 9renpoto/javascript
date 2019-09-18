@@ -1,19 +1,18 @@
-import 'mocha'
-import * as assert from 'power-assert'
+import assert from "power-assert";
 
-import Calculator from '../src'
+import Calculator from "../src";
 
-describe('Calculator', () => {
-  let subject: Calculator
+describe("Calculator", () => {
+  let subject: Calculator;
 
   beforeEach(() => {
-    subject = new Calculator()
-  })
+    subject = new Calculator();
+  });
 
-  describe('#add', () => {
-    it('should add two numbers together', () => {
-      const result: number = subject.add(2, 3)
-      assert(result === 5)
-    })
-  })
-})
+  describe("#add", () => {
+    it("should add two numbers together", () => {
+      const result: number = subject.add(2, 3);
+      assert(result === 5);
+    });
+  });
+});
