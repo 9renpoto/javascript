@@ -18,12 +18,10 @@
   "main": "n/a",
   "private": true,
   "scripts": {
-    "lint:eslint": "eslint src test --ext=ts,tsx -c .eslintrc.json",
+    "lint": "eslint src test --ext=ts,tsx -c .eslintrc.json",
     "build": "",
     "clean": "rimraf dist coverage",
     "coverage": "codecov -f ./coverage/lcov.info -F mocha",
-    "lint": "run-p lint:*",
-    "lint:ts": "tslint {src,test}/**/*.ts",
     "test": "TS_NODE_TRANSPILE_ONLY=1 nyc mocha -- test/*.test.ts"
   }
 }

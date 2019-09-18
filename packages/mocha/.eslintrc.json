@@ -1,11 +1,16 @@
 {
-  "parser": "typescript-eslint-parser",
-  "extends": [
-    "@9renpoto/eslint-config"
-  ],
+  "parser": "@typescript-eslint/parser",
+  "extends": ["@9renpoto/eslint-config"],
   "rules": {
     "space-infix-ops": 1,
     "space-before-function-paren": 1
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    }
   },
   "env": {
     "mocha": true
