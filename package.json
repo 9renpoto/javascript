@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "9renpoto",
   "devDependencies": {
-    "@9renpoto/eslint-config": "5.0.0",
+    "@9renpoto/eslint-config": "5.0.1",
     "@types/jest": "24.0.18",
     "@typescript-eslint/parser": "2.3.0",
     "codecov": "3.6.1",
