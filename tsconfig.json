@@ -1,20 +1,8 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
-    "baseUrl": "./",
-    "checkJs": true,
-    "declaration": true,
-    "downlevelIteration": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "inlineSourceMap": true,
-    "inlineSources": true,
-    "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["es2015"],
     "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": true,
@@ -26,9 +14,8 @@
     "noUnusedParameters": true,
     "outDir": "./lib",
     "removeComments": true,
-    "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
-    "target": "es5"
+    "target": "esnext"
   }
 }

@@ -1,5 +1,4 @@
 import assert from "power-assert";
-
 import Calculator from "../src";
 
 describe("Calculator", () => {
