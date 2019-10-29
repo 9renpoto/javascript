@@ -5,7 +5,7 @@
   "author": "9renpoto",
   "devDependencies": {
     "@9renpoto/eslint-config-typescript": "5.2.1",
-    "@types/jest": "24.0.20",
+    "@types/jest": "24.0.21",
     "codecov": "3.6.1",
     "eslint": "6.6.0",
     "eslint-plugin-jest": "23.0.2",
