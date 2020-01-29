@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": "@9renpoto",
   "devDependencies": {
-    "@types/mocha": "5.2.7",
+    "@types/mocha": "7.0.1",
     "@types/node": "13.5.1",
     "@types/power-assert": "1.5.3",
     "espower-typescript": "9.0.2",
